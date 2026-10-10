@@ -1,1 +1,33 @@
 *{box-sizing:border-box}body{margin:0;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#8eb56c;color:#f7f6ef}button{font:inherit;border:0;cursor:pointer}#game{position:relative;width:100vw;height:100dvh;overflow:hidden}#world{position:absolute;width:100%;height:100%;inset:0;touch-action:none}.topbar{position:absolute;z-index:2;top:0;left:0;right:0;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;gap:8px;background:linear-gradient(#18271de8,transparent);pointer-events:none}.brand{display:flex;align-items:center;gap:8px}.brand>span{font-size:27px}.brand strong,.brand small,.hud small,.hud strong{display:block}.brand strong{font-size:14px}.brand small,.hud small{font-size:10px;color:#d0dccb}.hud{display:flex;gap:6px}.hud>div{padding:8px 10px;border-radius:11px;background:#17271edb}.hud strong{font-size:12px;margin-top:3px}.left-panel{position:absolute;z-index:2;top:90px;left:12px;width:210px;padding:12px;background:#17271eea;border:1px solid #ffffff24;border-radius:16px;backdrop-filter:blur(8px)}.panel-heading{display:flex;justify-content:space-between;align-items:center;color:#c4dba9;font-size:11px;font-weight:800;letter-spacing:.12em;margin-bottom:8px}.panel-heading button,.modal-title button{background:#ffffff18;color:inherit;border-radius:8px;padding:5px 9px}.stat-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #ffffff13;font-size:11px}.stat-row span{color:#c0cdbb}.stat-row strong{font-size:11px}.panel-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}.panel-actions button,.modal-card button.action{padding:9px 6px;border-radius:9px;background:#d9e8c8;color:#243a29;font-size:11px;font-weight:750}.panel-actions button:first-child{background:#8ab66a}.hint{font-size:10px;line-height:1.4;color:#c5d1c0;margin-bottom:0}.right-stack{position:absolute;right:12px;top:100px;z-index:2;display:grid;gap:7px}.right-stack button{width:38px;height:38px;border-radius:13px;background:#17271edb;color:white;font-size:17px}.bottom-nav{position:absolute;z-index:2;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:5px;padding:6px;background:#17271ee8;border-radius:16px}.bottom-nav button{background:transparent;color:#d4dfce;border-radius:10px;min-width:62px;padding:7px 6px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:18px}.bottom-nav span{font-size:9px}.bottom-nav button.active{background:#d9e8c8;color:#243a29}.drive-controls{display:none;position:absolute;z-index:2;left:12px;right:12px;bottom:83px;justify-content:space-between;align-items:end;pointer-events:none}.drive-controls.visible{display:flex}.dpad,.pedals{pointer-events:auto}.dpad>button{display:block;margin:0 auto 4px}.dpad button,.pedals button{background:#17271edb;color:#fff;border:1px solid #ffffff40;border-radius:11px;width:40px;height:38px}.dpad div{display:flex;gap:4px}.pedals{display:flex;gap:5px}.pedals button{width:auto;padding:0 10px;font-size:10px;font-weight:bold}.pedals button:last-child{background:#d9e8c8;color:#243a29}.modal{position:absolute;z-index:10;inset:0;background:#07110bc2;display:grid;place-items:center;padding:16px}.modal.hidden{display:none}.modal-card{width:min(480px,100%);max-height:82dvh;overflow:auto;background:#f5f5eb;color:#243528;border-radius:19px;padding:18px}.modal-title{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #dce2d4;padding-bottom:10px;margin-bottom:12px}.modal-title h2{font-size:19px;margin:0}.modal-card p{font-size:13px;line-height:1.5}.modal-card button.action{margin:4px}.choice-list{display:grid;gap:8px}.choice{padding:11px;border-radius:11px;background:#e5ebdd;display:flex;justify-content:space-between;align-items:center;gap:10px}.choice small{display:block;color:#62715e;margin-top:3px}.money-tag{font-weight:800;white-space:nowrap}#toast{position:absolute;z-index:8;top:85px;left:50%;transform:translate(-50%,-5px);background:#17271eef;color:white;padding:10px 15px;border-radius:11px;font-size:12px;opacity:0;transition:.2s;pointer-events:none;text-align:center;max-width:90%}#toast.show{opacity:1;transform:translate(-50%,0)}.start-overlay{position:absolute;z-index:20;inset:0;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,#1e3b29,#537a45)}.start-overlay.done{display:none}.start-overlay h1{font-size:27px}.start-overlay p{color:#dce8d5}.start-overlay small{color:#c5d6be}.big-emoji{font-size:45px}@media(max-width:680px){.topbar{padding:9px}.brand strong{font-size:12px}.brand small{display:none}.brand>span{font-size:22px}.hud{gap:4px}.hud>div{padding:7px;min-width:57px}.hud small{font-size:9px}.hud strong{font-size:10px}.hud>div:last-child{display:none}.left-panel{top:72px;left:8px;width:168px;padding:9px}.panel-actions{gap:5px}.panel-actions button{font-size:10px;padding:8px 3px}.stat-row{font-size:10px;padding:6px 0}.stat-row strong{font-size:10px}.hint{font-size:9px}.right-stack{right:8px;top:78px}.right-stack button{width:34px;height:34px}.bottom-nav{bottom:7px;width:calc(100% - 16px);justify-content:space-around}.bottom-nav button{flex:1;min-width:0;padding:7px 3px}.drive-controls{left:8px;right:8px}}
+
+/* Kontrole za hodanje i vožnju na telefonu */
+.drive-controls {
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  left: 12px;
+  right: 12px;
+  bottom: 85px;
+  justify-content: space-between;
+  align-items: end;
+  pointer-events: none;
+}
+
+.drive-controls .dpad,
+.drive-controls .pedals {
+  pointer-events: auto;
+}
+
+.drive-controls .dpad button,
+.drive-controls .pedals button {
+  touch-action: none;
+  user-select: none;
+}
+
+.drive-controls .pedals {
+  display: none;
+}
+
+.drive-controls.driving .pedals {
+  display: flex;
+}
