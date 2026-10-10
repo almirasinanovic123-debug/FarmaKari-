@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="bs">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Harunova farma 3D</title>
+<link rel="stylesheet" href="./styles.css">
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.168.0/build/three.module.js"}}</script>
+</head>
+<body>
+<main id="game"><canvas id="world"></canvas>
+<header class="topbar"><div class="brand"><span>🌾</span><div><strong>Harunova farma</strong><small>Malo gazdinstvo, veliki planovi</small></div></div>
+<div class="hud"><div><small>Novac</small><strong id="money">5.000 KM</strong></div><div><small>Dan · sezona</small><strong id="date">1 · Proljeće</strong></div><div><small>Vrijeme</small><strong id="clock">08:00</strong></div></div></header>
+<aside class="left-panel"><div class="panel-heading">FARMA <button id="togglePanel">−</button></div><div id="panelContent">
+<div class="stat-row"><span>Gorivo</span><strong id="fuel">100%</strong></div><div class="stat-row"><span>Traktor</span><strong id="tractorStatus">Parkiran</strong></div><div class="stat-row"><span>Parcela</span><strong id="fieldStatus">Nijedna</strong></div>
+<div class="panel-actions"><button id="interactBtn">Interakcija</button><button id="vehicleBtn">Uđi u traktor</button><button id="fieldBtn">Obradi parcelu</button><button id="animalsBtn">Životinje</button><button id="marketBtn">Prodaja</button><button id="mapBtn">Kupi parcelu</button></div>
+<p class="hint" id="hint">Dodirni parcelu da je odabereš. WASD za hodanje.</p></div></aside>
+<div class="right-stack"><button id="saveBtn" title="Sačuvaj">💾</button><button id="helpBtn" title="Kontrole">?</button></div>
+<div id="driveControls" class="drive-controls"><div class="dpad"><button data-move="forward">▲</button><div><button data-move="left">◀</button><button data-move="back">▼</button><button data-move="right">▶</button></div></div><div class="pedals"><button data-move="brake">KOČNICA</button><button data-move="gas">GAS</button></div></div>
+<nav class="bottom-nav"><button data-tab="inventory">📦<span>Inventar</span></button><button data-tab="animals">🐂<span>Životinje</span></button><button data-tab="market">🛒<span>Prodaja</span></button><button data-tab="calendar">📅<span>Kalendar</span></button></nav>
+<div id="toast"></div><section class="modal hidden" id="modal"><div class="modal-card"><div class="modal-title"><h2 id="modalTitle"></h2><button id="closeModal">✕</button></div><div id="modalBody"></div></div></section>
+<div id="loading" class="start-overlay"><div><div class="big-emoji">🌾🚜</div><h1>Harunova farma</h1><p>Priprema se tvoje gazdinstvo…</p><small>Potrebna je internet veza za 3D biblioteku.</small></div></div>
+</main><script type="module" src="./src/main.js"></script></body></html>
